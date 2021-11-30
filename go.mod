@@ -2,7 +2,10 @@ module lego_demo
 
 go 1.17
 
-require github.com/liwei1dao/lego v0.0.0-20211124032024-0ba03764eb51
+require (
+	github.com/golang/protobuf v1.4.3
+	github.com/liwei1dao/lego v0.0.0-20211124032024-0ba03764eb51
+)
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
@@ -10,6 +13,7 @@ require (
 	github.com/StackExchange/wmi v0.0.0-20180116203802-5d049714c4a6 // indirect
 	github.com/aliyun/alibaba-cloud-sdk-go v1.61.885 // indirect
 	github.com/armon/go-metrics v0.3.6 // indirect
+	github.com/auth0/go-jwt-middleware v1.0.0 // indirect
 	github.com/aws/aws-sdk-go v1.34.28 // indirect
 	github.com/axgle/mahonia v0.0.0-20180208002826-3358181d7394 // indirect
 	github.com/buger/jsonparser v0.0.0-20181115193947-bf1c66bbce23 // indirect
@@ -20,12 +24,13 @@ require (
 	github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21 // indirect
 	github.com/eapache/queue v1.1.0 // indirect
 	github.com/fatih/color v1.9.0 // indirect
+	github.com/form3tech-oss/jwt-go v3.2.2+incompatible // indirect
 	github.com/go-errors/errors v1.0.1 // indirect
 	github.com/go-ole/go-ole v1.2.1 // indirect
 	github.com/go-redis/redis/v8 v8.8.0 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
-	github.com/golang/protobuf v1.4.3 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
+	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/hashicorp/consul/api v1.8.1 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.1 // indirect
 	github.com/hashicorp/go-hclog v0.12.0 // indirect
@@ -62,6 +67,7 @@ require (
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475 // indirect
 	github.com/robfig/cron/v3 v3.0.1 // indirect
 	github.com/rs/xid v1.3.0 // indirect
+	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/shirou/gopsutil v3.20.12+incompatible // indirect
 	github.com/toolkits/concurrent v0.0.0-20150624120057-a4371d70e3e3 // indirect
 	github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c // indirect

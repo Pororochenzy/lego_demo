@@ -1,0 +1,22 @@
+version: "3.7"
+
+# 申明同一个网络
+networks:
+  net:
+    name: net
+# 服务
+services:
+  go_console:
+      image: golang:alpine
+      container_name: go_console
+      networks:
+        net:
+          aliases:
+            - go_console
+      ports:
+        - 9567:9567
+      volumes:
+        - ../conf/console.toml:/usr/local/go_console/conf/console.toml
+        - ../console:/usr/local/go_console/console
+      working_dir: /usr/local/go_console
+      entrypoint: ["./console", "-conf", "./conf/console.toml"]

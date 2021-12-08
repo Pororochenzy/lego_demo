@@ -31,6 +31,7 @@ Kafka_Host = ["172.20.27.148:9092","172.20.27.149:9092","172.20.27.150:9092"]   
 
 [Modules.SM_ConsoleModule]
 ListenPort = 9567                           #web端口
+Cors = true                                 #允许跨域
 SignKey = "@234%67g12q4*67m12#4l67!"        #签名密钥 长度 24 对称加密需要固定长度密钥
 RedisUrl = "172.20.27.145:10001"
 RedisDB = 1

@@ -16,7 +16,6 @@ services:
       ports:
         - 9567:9567
       volumes:
-        - ../conf/console.toml:/usr/local/go_console/conf/console.toml
-        - ../console:/usr/local/go_console/console
+        - ../:/usr/local/go_console
       working_dir: /usr/local/go_console
       entrypoint: ["./console", "-conf", "./conf/console.toml"]

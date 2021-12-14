@@ -7,7 +7,7 @@ networks:
 # 服务
 services:
   go_console:
-      image: golang:alpine
+      image: centos:7
       container_name: go_console
       networks:
         net:

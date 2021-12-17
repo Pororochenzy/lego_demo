@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/golang/protobuf v1.4.3
-	github.com/liwei1dao/lego v0.0.0-20211208054032-a4010f62671c
+	github.com/liwei1dao/lego v0.0.0-20211217011619-f701dab3c23c
 	google.golang.org/protobuf v1.25.0
 )
 

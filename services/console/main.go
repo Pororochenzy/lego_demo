@@ -11,13 +11,14 @@ import (
 )
 
 var (
-	conf = flag.String("conf", "./conf/demo.toml", "获取需要启动的服务配置文件")
+	conf = flag.String("conf", "./conf/demo.yaml", "获取需要启动的服务配置文件")
 )
 
 func main() {
 	flag.Parse()
 	s := NewService(
 		cluster.SetConfPath(*conf),
+		cluster.SetVersion("1.0.0.0"),
 	)
 	s.OnInstallComp( //装备组件
 	)

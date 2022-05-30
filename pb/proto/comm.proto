@@ -1,0 +1,40 @@
+syntax = "proto3";
+option go_package = ".;pb";
+
+
+message JSONData {
+    int32 ID = 1;
+    string Name  =2;     
+	string Desc  =3;     
+    string	Executor   =4;     
+	string BlackboardID =5;     
+	Root Root       =6;     
+}
+
+message Root {
+    int32 ID = 1;
+	string NodeName    = 2;
+	string Desc       = 3;
+	repeated Decorators Decorators   = 4;
+	repeated Children   Children  = 5;
+}
+
+
+message Decorators {
+	int32 ID      = 1;
+	string NodeName        = 2;
+	string FlowAbortMode        = 3;
+	int32 NumLoops           = 4;
+	bool InfiniteLoop         = 5;
+	int32 InfiniteLoopTimeoutTime   = 6;
+}
+
+message Children {
+    int32 ID      = 1;
+    string	NodeName       = 2;          
+    bool	IgnoreRestartSelf = 3;
+	int32 WaitTime          = 4;
+	double RandomDeviation   = 5;
+	string OriginPositionKey       = 6;  
+	int32 Radius         = 7;
+}

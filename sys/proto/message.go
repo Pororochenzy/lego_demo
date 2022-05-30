@@ -8,9 +8,9 @@ import (
 	"io"
 	"reflect"
 
-	"github.com/golang/protobuf/proto"
 	lproto "github.com/liwei1dao/lego/sys/proto"
 	"github.com/liwei1dao/lego/sys/rpc"
+	"google.golang.org/protobuf/proto"
 )
 
 const (

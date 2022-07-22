@@ -1,10 +1,14 @@
  #!/bin/sh
     SERVICE=$2
-    CMD="./$2 -conf $3"
+    CMD="./$3 -conf $4"
  
     start(){
-        echo "starting..."
-        nohup $CMD > /dev/null 2>&1 &  
+        echo "starting $SERVICE..."
+
+        num=`ps -ef | grep $SERVICE | grep -v grep | wc -l`
+        if [ $num -eq 0 ]
+        then
+            nohup $CMD > /dev/null 2>&1 &  
             # nohup $CMD >output.log 2>&1 &
             if [ $? -ne 0 ]
             then
@@ -14,9 +18,14 @@
                 echo $! > $SERVICE.pid 
                 echo "start success"
             fi
+        else
+            echo "$SERVICE is already running"
+        fi
+
+
     }
     stop(){
-        echo "stopping..."
+        echo "stopping $SERVICE..."
         kill -9 `cat $SERVICE.pid`
         if [ $? -ne 0 ]
         then

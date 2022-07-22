@@ -16,8 +16,6 @@
 *.log
 *log/
 # bin/datacollector
-bin/conf
-bin/nacos
 *.DS_Store
 .DS_Store
 vsdebug_*

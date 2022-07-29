@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"lego_demo/modules/gate"
+	"lego_demo/modules/demo"
 	"lego_demo/services"
 
 	"github.com/liwei1dao/lego"
@@ -11,7 +11,7 @@ import (
 )
 
 var (
-	conf = flag.String("conf", "./conf/gate.yaml", "获取需要启动的服务配置文件") //启动服务的Id
+	conf = flag.String("conf", "./conf/demo.yaml", "获取需要启动的服务配置文件")
 )
 
 func main() {
@@ -23,21 +23,20 @@ func main() {
 	s.OnInstallComp( //装备组件
 	)
 	lego.Run(s, //运行模块
-		gate.NewModule(),
+		demo.NewModule(),
 	)
-
 }
 
 func NewService(ops ...cluster.Option) core.IService {
-	s := new(Demo1Service)
+	s := new(Service)
 	s.Configure(ops...)
 	return s
 }
 
-type Demo1Service struct {
+type Service struct {
 	services.ServiceBase
 }
 
-func (this *Demo1Service) InitSys() {
+func (this *Service) InitSys() {
 	this.ServiceBase.InitSys()
 }

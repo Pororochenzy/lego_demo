@@ -1,0 +1,10 @@
+syntax = "proto3";
+option go_package = ".;pb";
+
+message DemoTestReq {
+    string name = 1;
+}
+
+message DemoTestResp {
+    string name = 1;
+}

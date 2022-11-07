@@ -27,5 +27,5 @@ def buildProto(pbpath,outpath,pbfile):
         f.write(file_data)
 
 
-buildProto('./pb/proto','./pb','msg_system')
+buildProto('./pb/proto','./pb','msg')
 

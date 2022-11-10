@@ -5,8 +5,9 @@ type : "demo"                          #服务类型 相同服务类型相同 �
 #系统配置
 sys:
   log:  #日志系统                            
-    FileName: "./log/demo1"               #日志文件存放地址
+    FileName: "./log/demo1.log"           #日志文件存放地址
     Loglevel: 5                           #日志文件输出级别
+    ReportCaller: 5                       #堆栈输出日志级别
     RotationTime: 24                      #日志文件最大Size
     MaxAgeTime: 7                         #日志文件最多保留天数
   rpc:   #rpcx 系统配置
@@ -15,7 +16,7 @@ sys:
     MessageEndpoints: ["127.0.0.1:9685"]
     DiscoveryStoreType: 1 #0不启用服务发现 1:Consul 2:Zookeeper 3:Redis
     DiscoveryEndpoints: ["10.0.0.9:10012"]
-    DiscoveryInterval: 30
+    DiscoveryInterval: 10
 
 #模块配置
 modules:

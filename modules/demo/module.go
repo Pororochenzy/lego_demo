@@ -59,9 +59,10 @@ func (this *Demo) Event_RpcDiscoverNewNodes(nodes []*core.ServiceNode) {
 	for _, v := range nodes {
 		if v.Id != this.service.GetId() && v.Id == "demo2" {
 			resp := &pb.DemoTestResp{}
-			this.service.RpcCall(context.Background(), fmt.Sprintf("%s/%s", v.Type, v.Id), comm.Rpc_ModuleDemoTest, &pb.DemoTestReq{
+			err := this.service.RpcCall(context.Background(), fmt.Sprintf("%s/%s", v.Type, v.Id), comm.Rpc_ModuleDemoTest, &pb.DemoTestReq{
 				Name: this.service.GetId(),
 			}, resp)
+			log.Debug("Event_RpcDiscoverNewNodes", log.Field{Key: "resp", Value: resp.String()}, log.Field{Key: "err", Value: err})
 		}
 	}
 }

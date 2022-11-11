@@ -13,6 +13,7 @@ sys:
   rpc:   #rpcx 系统配置
     Debug: true
     ConnectType: 0    #0:Tcp 1:Kafka 2:Nats 3:http
+    SerializeType: 0  #0:JSON 1:ProtoBuffer 2:MsgPack 3:Thrift
     MessageEndpoints: ["127.0.0.1:9685"]
     DiscoveryStoreType: 1 #0不启用服务发现 1:Consul 2:Zookeeper 3:Redis
     DiscoveryEndpoints: ["10.0.0.9:10012"]

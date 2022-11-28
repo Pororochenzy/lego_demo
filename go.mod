@@ -3,7 +3,7 @@ module lego_demo
 go 1.18
 
 require (
-	github.com/liwei1dao/lego v0.0.0-20211217090555-04bd1ae27bde
+	github.com/liwei1dao/lego v0.0.0-00010101000000-000000000000
 	google.golang.org/protobuf v1.28.1
 )
 
@@ -32,13 +32,11 @@ require (
 	github.com/jcmturner/gofork v1.0.0 // indirect
 	github.com/jcmturner/gokrb5/v8 v8.4.2 // indirect
 	github.com/jcmturner/rpc/v2 v2.0.3 // indirect
-	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.15.8 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/mapstructure v1.4.3 // indirect
-	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/philhofer/fwd v1.1.1 // indirect
 	github.com/pierrec/lz4/v4 v4.1.15 // indirect
@@ -56,4 +54,4 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
-replace github.com/liwei1dao/lego => F:\work\go\lego
+replace github.com/liwei1dao/lego => /Users/mac/go/src/lego-develop
